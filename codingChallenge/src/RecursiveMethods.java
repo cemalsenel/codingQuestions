@@ -1,4 +1,4 @@
-public class Coding_1 {
+public class RecursiveMethods {
     public static void main(String[] args) {
 
 //        recur(4);
