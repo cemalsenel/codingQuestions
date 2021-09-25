@@ -10,7 +10,11 @@ public class ArrayQuestions {
         int[] nums = {12, 17, 8, 1};
         int target = 9;
         int[] result = twoSum(nums, target);
-        System.out.println(Arrays.toString(result));
+//        System.out.println(Arrays.toString(result));
+
+        //3.Question: Finding a number in an Array
+        int[] array = {1, 2, 3, 4, 5, 6};
+        linearSearch(array, 8);
 
 
     }
@@ -36,5 +40,15 @@ public class ArrayQuestions {
         }
         throw new IllegalArgumentException("No solution found!");
 
+    }
+
+    public static void linearSearch(int[] array, int value){
+        for (int i = 0; i < array.length; i++){
+            if(array[i] == value){
+                System.out.println("Value is found at the index of "+ i);
+                return;
+            }
+        }
+        System.out.println(value + " is not found");
     }
 }
