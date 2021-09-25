@@ -19,9 +19,11 @@ public class ArrayQuestions {
         //4.Question:Max product of two integers
         int[] product = {10, 20, 30, 40, 50};
         String pairs = maxProduct(product);
-        System.out.println(pairs);
+//        System.out.println(pairs);
 
-
+        //5.Question: check array unique or not
+        int[] check = {1, 2, 3, 4};
+        System.out.println("Is array unique : " + isUnique(check));
     }
 
     public static void missingNumber(int[] intArray){
@@ -70,5 +72,16 @@ public class ArrayQuestions {
             }
         }
         return pairs;
+    }
+
+    public static boolean isUnique(int[] check) {
+        for (int i = 0; i < check.length; i++){
+            for (int j = i+1; j < check.length; j++){
+                if(check[i] == check[j]){
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }
