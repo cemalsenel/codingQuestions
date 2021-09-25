@@ -14,7 +14,12 @@ public class ArrayQuestions {
 
         //3.Question: Finding a number in an Array
         int[] array = {1, 2, 3, 4, 5, 6};
-        linearSearch(array, 8);
+//        linearSearch(array, 8);
+
+        //4.Question:Max product of two integers
+        int[] product = {10, 20, 30, 40, 50};
+        String pairs = maxProduct(product);
+        System.out.println(pairs);
 
 
     }
@@ -50,5 +55,20 @@ public class ArrayQuestions {
             }
         }
         System.out.println(value + " is not found");
+    }
+
+    public static String maxProduct(int[] product){
+        int maxProduct = 0;
+        String pairs = "";
+
+        for(int i = 0 ; i < product.length; i++){
+            for(int j = i+1 ; j < product.length; j++){
+                if(product[i] * product[j] > maxProduct){
+                    maxProduct = product[i]*product[j];
+                    pairs = Integer.toString(product[i]) + "," + Integer.toString(product[j]);
+                }
+            }
+        }
+        return pairs;
     }
 }
